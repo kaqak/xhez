@@ -1,0 +1,316 @@
+//colors
+$color-gray-dark: #777;
+$color-white: #fff;
+$color-black: #000;
+//grid
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 5rem;
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%; /* font-size: 10px; 100% or 10/16 =62.5 */
+}
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: $color-gray-dark;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+
+/*############LOGO################*/
+.logo_container {
+  text-align: center;
+  box-sizing: border-box;
+  margin-top: 9.6rem;
+}
+.logo {
+  height: 29px;
+  width: 87px;
+}
+
+/*############COUNTDOWN TIMER################*/
+.card {
+  margin-top: 9.9rem;
+  border-radius: 0.25rem;
+  // margin-top: 20px;
+  text-align: center;
+}
+.card__body {
+  font-size: 0;
+  padding: 1.25rem;
+}
+.card__title {
+  font-size: 2rem;
+  margin: 0 0 0.75rem;
+}
+
+.countdown__section {
+  display: inline-block;
+  margin-left: 12px;
+  font-weight: bold;
+}
+
+.countdown__section:first-child {
+  margin-left: 0;
+}
+.countdown__section > .value {
+  background-color: #eeeef0;
+  border-radius: 24px;
+  font-family: "inter";
+  font-size: 48px;
+  color: #101010;
+  line-height: 100px;
+  text-align: center;
+  height: 96px;
+  width: 96px;
+}
+#days {
+  background-color: #f6512c;
+  color: #fff;
+}
+.countdown__label {
+  color: #a2a4a6;
+  font-size: 10px;
+  font-family: "inter";
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  line-height: 12px;
+  padding-top: 20px;
+  text-align: center;
+}
+/*############SEARCH################*/
+.search {
+  position: absolute;
+  margin-top: 13rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+input,
+button {
+  all: unset;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Main CSS */
+.search {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 57px;
+  max-width: 385px;
+  font-size: 16px;
+  background-color: #fff;
+  border-radius: 25px;
+  border: 1px solid #e3e4e6;
+}
+.search-input {
+  width: 85.5%;
+  height: 100%;
+  margin: 0 5px 0 18px;
+  background-color: transparent;
+  appearance: none;
+}
+.search-button {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  height: 40px;
+  min-width: 40px;
+  margin: 10px 10px 10px auto;
+  padding: 0 14px;
+  background-color: #f6512c;
+  border-radius: 16px;
+  text-align: center;
+  line-height: 1.2em;
+  flex-shrink: 0;
+  color: #fff;
+  cursor: pointer;
+}
+.search-button::before {
+  content: "\f0e0";
+  font-family: "FontAwesome";
+}
+.search-button span {
+  display: inline-block;
+  width: 50px;
+  padding-left: 5px;
+  color: #ffffff;
+  font-family: "inter";
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.75px;
+  line-height: 15px;
+  text-align: center;
+  overflow: hidden;
+  transition: width 0.4s ease, padding-left 0.1s ease;
+}
+.search-button:focus {
+  outline: none !important;
+  box-shadow: 0 0 2px 2px #b0caf1;
+}
+
+@media (min-width: 768px) {
+  .search {
+    font-size: 14px;
+  }
+  .search-button span {
+    width: 0;
+    padding-left: 0;
+    transition: width 0.4s ease, padding-left 0.1s ease 0.3s;
+  }
+  .search-button:hover span,
+  .search-button:focus span {
+    width: 110px;
+    padding-left: 5px;
+    transition: width 0.4s ease, padding-left 0.1s ease;
+  }
+}
+.register p {
+  position: absolute;
+  left: 50%;
+  margin-top: 6.4rem;
+  transform: translate(-50%, -50%);
+  height: 23px;
+  width: 351px;
+  color: #a2a4a6;
+  font-family: "inter";
+  font-size: 14px;
+  letter-spacing: -0.1px;
+  line-height: 23px;
+  text-align: center;
+}
+
+.row2 {
+  position: absolute;
+  top: 95% !important;
+}
+
+.row {
+  max-width: 129.8rem;
+  // background-color: #eee;
+  // margin: 30rem auto;
+  margin-top: 6rem;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical;
+  }
+  @include clearfix;
+  [class^="col-"] {
+    // background-color: orangered;
+    float: left;
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+  }
+  .col-1-of-2 {
+    width: calc((100% - #{$gutter-horizontal}) / 2);
+  }
+  .col-1-of-3 {
+    width: calc((100% - 2 * (#{$gutter-horizontal})) / 3);
+  }
+  .col-2-of-3 {
+    width: calc(
+      (2 * (100% - 2 * (#{$gutter-horizontal})) / 3) + #{$gutter-horizontal}
+    );
+  }
+  .col-1-of-4 {
+    width: calc((100% - 3 * (#{$gutter-horizontal})) / 4);
+  }
+  .col-2-of-4 {
+    width: calc(
+      (2 * (100% - 3 * (#{$gutter-horizontal})) / 4) + #{$gutter-horizontal}
+    );
+  }
+  .col-3-of-4 {
+    width: calc(
+      (3 * (100% - 3 * (#{$gutter-horizontal})) / 4) + 2 * #{$gutter-horizontal}
+    );
+  }
+  .col-1-of-6 {
+    width: calc((100% - 5 * (#{$gutter-horizontal})) / 6);
+  }
+}
+
+/* Reset styles */
+.word {
+  max-width: 100%;
+  position: absolute;
+  right: 56rem;
+}
+.js {
+  position: absolute;
+  right: 27rem;
+  top: -8rem;
+}
+.ps {
+  position: absolute;
+  top: -16rem;
+  right: 7rem;
+}
+.php {
+  position: absolute;
+  left: -3rem;
+}
+.sketch {
+  position: absolute;
+  left: 19rem;
+  bottom: -8rem;
+}
+.css {
+  position: absolute;
+  left: 42rem;
+  bottom: -13rem;
+}
+
+.excel {
+  position: absolute;
+  top: -11rem;
+  right: 43rem;
+}
+.xd {
+  position: absolute;
+  top: -8rem;
+  right: 26rem;
+}
+.figma {
+  position: absolute;
+  top: -11rem;
+  right: 8rem;
+}
+.html {
+  position: absolute;
+  top: -9rem;
+  left: 12rem;
+}
+.java {
+  position: absolute;
+  top: -10rem;
+  left: 27rem;
+}
+.ps_small {
+  position: absolute;
+  top: -10rem;
+  left: 65rem;
+}

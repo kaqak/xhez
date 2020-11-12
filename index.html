@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <title>Xhezacademy | Only the educated are free</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo_container">
+        <img class="logo" src="/img/course-icons/logo-xheza.svg" alt="" />
+      </div>
+    </header>
+    <div class="container">
+      <div class="card">
+        <div class="card__body">
+          <div class="countdown__section">
+            <div id="days" class="value">00</div>
+            <div class="countdown__label">DITË</div>
+          </div>
+          <div class="countdown__section">
+            <div id="hours" class="value">00</div>
+            <div class="countdown__label">ORË</div>
+          </div>
+          <div class="countdown__section">
+            <div id="minutes" class="value">00</div>
+            <div class="countdown__label">MINUTA</div>
+          </div>
+          <div class="countdown__section">
+            <div id="seconds" class="value">00</div>
+            <div class="countdown__label">SEKONDA</div>
+          </div>
+        </div>
+      </div>
+      <div class="register">
+        <p>Regjistrohu per tu njoftuar i pari lansimin e akademise</p>
+        <form action="" role="email" class="search">
+          <input
+            type="email"
+            class="search-input"
+            placeholder="E-maili yt"
+            aria-label="Search"
+          />
+          <button type="submit" class="search-button">
+            <span> REGJISTROHU</span>
+          </button>
+        </form>
+      </div>
+    </div>
+    <section class="grid-test">
+      <div class="row" id="scene2">
+        <div class="col-1-of-6" data-depth-x="0.1" data-depth-y="-0.1">
+          <img class="word" src="/img/course-icons/word.svg" alt="" />
+        </div>
+        <div class="col-1-of-6" data-depth-x="-0.10" data-depth-y="-0.1">
+          <img class="js" src="/img/course-icons/js.svg" alt="" />
+        </div>
+        <div class="col-1-of-6" data-depth-x="0.1" data-depth-y="0.1">
+          <img class="ps" src="/img/course-icons/ps.svg" alt="" />
+        </div>
+        <div class="col-1-of-6" data-depth-x="-0.1" data-depth-y="0.1">
+          <img class="php" src="/img/course-icons/php.svg" alt="" />
+        </div>
+        <div class="col-1-of-6" data-depth-x="0.1" data-depth-y="0.1">
+          <img class="sketch" src="/img/course-icons/sketch.svg" alt="" />
+        </div>
+        <div class="col-1-of-6" data-depth-x="0.1" data-depth-y="-0.1">
+          <img class="css" src="/img/course-icons/css.svg" alt="" />
+        </div>
+      </div>
+      <div class="row row2" id="scene">
+        <div class="col-1-of-6" data-depth-x="-0.1" data-depth-y="0.1">
+          <img class="excel" src="/img/course-icons/excel.svg" alt="" />
+        </div>
+        <div class="col-1-of-6" data-depth-x="0.1" data-depth-y="-0.1">
+          <img class="xd" src="/img/course-icons/xd.svg" alt="" />
+        </div>
+        <div class="col-1-of-6" data-depth-x="-0.1" data-depth-y="-0.1">
+          <img class="figma" src="/img/course-icons/figma.svg" alt="" />
+        </div>
+        <div class="col-1-of-6" data-depth-x="0.1" data-depth-y="-0.1">
+          <img class="html" src="/img/course-icons/html.svg" alt="" />
+        </div>
+        <div class="col-1-of-6" data-depth-x="-0.10" data-depth-y="-0.10">
+          <img class="java" src="/img/course-icons/java.svg" alt="" />
+        </div>
+        <div class="col-1-of-6" data-depth-x="-0.1" data-depth-y="-0.10">
+          <img class="ps_small" src="/img/course-icons/ps_small.svg" alt="" />
+        </div>
+      </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      var scene = document.getElementById("scene");
+      var parallaxInstance = new Parallax(scene, {
+        relativeInput: true,
+      });
+    </script>
+    <script>
+      var scene2 = document.getElementById("scene2");
+      var parallaxInstance = new Parallax(scene2, {
+        relativeInput: true,
+      });
+    </script>
+  </body>
+</html>
