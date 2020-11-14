@@ -1,0 +1,365 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%; /* font-size: 10px; 100% or 10/16 =62.5 */
+}
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: $color-gray-dark;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+
+/*############LOGO################*/
+.logo_container {
+  text-align: center;
+  box-sizing: border-box;
+  margin-top: 5.6rem;
+}
+.logo {
+  height: 29px;
+  width: 87px;
+}
+
+/*############COUNTDOWN TIMER################*/
+.card {
+  margin-top: 9.9rem;
+  border-radius: 0.25rem;
+  // margin-top: 20px;
+  text-align: center;
+}
+.card__body {
+  @include responsive(small-phone) {
+    width: 80%;
+  }
+  font-size: 0;
+  padding: 1.25rem;
+}
+.card__title {
+  font-size: 2rem;
+  margin: 0 0 0.75rem;
+}
+
+.countdown__section {
+  display: inline-block;
+  margin-left: 12px;
+  font-weight: bold;
+}
+
+.countdown__section:first-child {
+  margin-left: 0;
+}
+.countdown__section > .value {
+  background-color: #eeeef0;
+  border-radius: 24px;
+  font-family: "inter";
+  font-size: 48px;
+  color: #101010;
+  line-height: 100px;
+  text-align: center;
+  height: 96px;
+  width: 96px;
+}
+#days {
+  background-color: #f6512c;
+  color: #fff;
+}
+.countdown__label {
+  color: #a2a4a6;
+  font-size: 10px;
+  font-family: "inter";
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  line-height: 12px;
+  padding-top: 20px;
+  text-align: center;
+}
+/*############SEARCH################*/
+.search {
+  position: absolute;
+  margin-top: 13rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+input,
+button {
+  all: unset;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Main CSS */
+.search {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 57px;
+  max-width: 385px;
+  font-size: 16px;
+  background-color: #fff;
+  border-radius: 25px;
+  border: 1px solid #e3e4e6;
+}
+.search-input {
+  width: 85.5%;
+  height: 100%;
+  margin: 0 5px 0 18px;
+  background-color: transparent;
+  appearance: none;
+}
+.search-button {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  height: 40px;
+  min-width: 40px;
+  margin: 10px 10px 10px auto;
+  padding: 0 14px;
+  background-color: #f6512c;
+  border-radius: 16px;
+  text-align: center;
+  line-height: 1.2em;
+  flex-shrink: 0;
+  color: #fff;
+  cursor: pointer;
+}
+.search-button::before {
+  content: "\f0e0";
+  font-family: "FontAwesome";
+}
+.search-button span {
+  display: inline-block;
+  width: 50px;
+  padding-left: 5px;
+  color: #ffffff;
+  font-family: "inter";
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.75px;
+  line-height: 15px;
+  text-align: center;
+  overflow: hidden;
+  transition: width 0.4s ease, padding-left 0.1s ease;
+}
+.search-button:focus {
+  outline: none !important;
+  box-shadow: 0 0 2px 2px #b0caf1;
+}
+
+@media (min-width: 768px) {
+  .search {
+    font-size: 14px;
+  }
+  .search-button span {
+    width: 0;
+    padding-left: 0;
+    transition: width 0.4s ease, padding-left 0.1s ease 0.3s;
+  }
+  .search-button:hover span,
+  .search-button:focus span {
+    width: 110px;
+    padding-left: 5px;
+    transition: width 0.4s ease, padding-left 0.1s ease;
+  }
+}
+.register p {
+  position: absolute;
+  left: 50%;
+  margin-top: 6.4rem;
+  transform: translate(-50%, -50%);
+  height: 23px;
+  width: 351px;
+  color: #a2a4a6;
+  font-family: "inter";
+  font-size: 14px;
+  letter-spacing: -0.1px;
+  line-height: 23px;
+  text-align: center;
+}
+
+.row {
+  max-width: 129.8rem;
+  // background-color: #eee;
+  // margin: 30rem auto;
+  margin-top: 6rem;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical;
+  }
+  @include clearfix;
+  [class^="col-"] {
+    // background-color: orangered;
+    float: left;
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+  }
+  .col-1-of-6 {
+    width: calc((100% - 5 * (#{$gutter-horizontal})) / 6);
+  }
+}
+.row2 {
+  max-width: 129.8rem;
+  // background-color: #eee;
+  // margin: 30rem auto;
+  margin-top: 6rem;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical;
+  }
+  @include clearfix;
+  [class^="col-"] {
+    // background-color: orangered;
+    float: left;
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+  }
+  .col-1-of-6 {
+    width: calc((100% - 5 * (#{$gutter-horizontal})) / 6);
+  }
+}
+.composition {
+  position: relative;
+  &__photo {
+    position: absolute;
+    &--p1 {
+      @include responsive(laptop) {
+        right: 35rem;
+      }
+      @include responsive(tablet-landscape) {
+        right: 30rem;
+      }
+      right: 45rem;
+      top: 4rem;
+    }
+    &--p2 {
+      @include responsive(tablet-landscape) {
+        width: 14rem;
+      }
+      @include responsive(tablet-portrait) {
+        top: 3rem;
+        left: -15rem;
+        width: 10rem;
+      }
+      @include responsive(phone) {
+        width: 12rem;
+      }
+      top: -3rem;
+      right: 17rem;
+    }
+    &--p3 {
+      @include responsive(tablet-landscape) {
+        width: 14rem;
+        top: -8rem;
+      }
+      top: -11rem;
+      right: -6rem;
+    }
+    &--p4 {
+      @include responsive(phone) {
+        width: 12rem;
+      }
+      top: 3rem;
+      left: 5rem;
+    }
+    &--p5 {
+      @include responsive(tablet-portrait) {
+        width: 12rem;
+        left: 30rem;
+      }
+      @include responsive(phone) {
+        left: 22rem;
+        top: -6rem;
+      }
+      top: -5rem;
+      left: 30rem;
+    }
+    &--p6 {
+      @include responsive(tablet-landscape) {
+        width: 13rem;
+      }
+      @include responsive(tablet-portrait) {
+        width: 10rem;
+        left: 20rem;
+      }
+      @include responsive(phone) {
+        left: 30rem;
+        top: 4rem;
+      }
+      top: 0rem;
+      left: 51rem;
+    }
+    &--p7 {
+      @include responsive(laptop) {
+        right: 25rem;
+        // width: 15rem;
+      }
+      top: -1rem;
+      right: 32rem;
+    }
+    &--p8 {
+      @include responsive(laptop) {
+        width: 10rem;
+        right: 5rem;
+      }
+      @include responsive(tablet-portrait) {
+        right: -3rem;
+      }
+      top: 1rem;
+      right: 9rem;
+    }
+    &--p9 {
+      @include responsive(tablet-portrait) {
+        display: none;
+      }
+      top: -1rem;
+      right: -3rem;
+    }
+    &--p10 {
+      @include responsive(phone) {
+        width: 8rem;
+        left: 17rem;
+        top: -8rem;
+      }
+      top: 0rem;
+      left: 22rem;
+    }
+    &--p11 {
+      @include responsive(tablet-portrait) {
+        width: 12rem;
+        left: 30rem;
+      }
+      @include responsive(phone) {
+        left: 25rem;
+        top: 2rem;
+      }
+      top: 0rem;
+      left: 37rem;
+    }
+    &--p12 {
+      @include responsive(tablet-landscape) {
+        display: none;
+      }
+      top: 0rem;
+      left: 70rem;
+    }
+  }
+}

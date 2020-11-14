@@ -1,0 +1,55 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+//MEDIA QUERY MANAGER
+// 0000-0600px Phone
+// 0600-0900px Tablet Portrait
+// 0900-1200px Tablet Landscape
+// 1200-1800px Desktops & Laptops
+// 1800+ Big Desktops
+
+//breakpoints:
+// -phone
+// -tablet-portrait
+// -tablet-landscape
+// -big-desktop
+
+//ORDER Base + Typography > general layout + grid > page layout > components
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == small-phone {
+    @media (max-width: 31.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == phone {
+    // 1 em = 16 px, Ems and Rems in media queries aren't affected by the root so the default value is 16
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet-portrait {
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet-landscape {
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == laptop {
+    @media (max-width: 83.2em) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
