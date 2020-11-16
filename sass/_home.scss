@@ -23,6 +23,12 @@ body {
   text-align: center;
   box-sizing: border-box;
   margin-top: 5.6rem;
+  @include responsive(phone) {
+    margin-top: 2rem;
+  }
+  @include responsive(small-phone) {
+    margin-top: 1rem;
+  }
 }
 .logo {
   height: 29px;
@@ -35,10 +41,15 @@ body {
   border-radius: 0.25rem;
   // margin-top: 20px;
   text-align: center;
+  @include responsive(phone) {
+    margin-top: 6rem;
+  }
+  @include responsive(small-phone) {
+    margin-top: 4rem;
+  }
 }
 .card__body {
   @include responsive(small-phone) {
-    width: 80%;
   }
   font-size: 0;
   padding: 1.25rem;
@@ -52,6 +63,10 @@ body {
   display: inline-block;
   margin-left: 12px;
   font-weight: bold;
+  @include responsive(small-phone) {
+    margin-left: 3px;
+    display: inline-block;
+  }
 }
 
 .countdown__section:first-child {
@@ -247,119 +262,250 @@ button {
       @include responsive(tablet-landscape) {
         right: 30rem;
       }
+      @include responsive(tablet-portrait) {
+        right: 20rem;
+        top: 6rem;
+      }
+      @include responsive(phone) {
+        right: 10rem;
+        top: -5rem;
+      }
+      @include responsive(small-phone) {
+        right: 5rem;
+        top: -20rem;
+      }
       right: 45rem;
       top: 4rem;
     }
     &--p2 {
+      top: -3rem;
+      right: 17rem;
+      @include responsive(laptop) {
+        right: 16rem;
+      }
       @include responsive(tablet-landscape) {
         width: 14rem;
       }
       @include responsive(tablet-portrait) {
         top: 3rem;
-        left: -15rem;
+        right: 5rem;
         width: 10rem;
       }
       @include responsive(phone) {
         width: 12rem;
       }
-      top: -3rem;
-      right: 17rem;
+      @include responsive(small-phone) {
+        top: 6rem;
+        width: 10rem;
+        right: 0rem;
+      }
     }
     &--p3 {
+      position: absolute;
+      @include responsive(laptop) {
+      }
       @include responsive(tablet-landscape) {
         width: 14rem;
         top: -8rem;
       }
-      top: -11rem;
-      right: -6rem;
-    }
-    &--p4 {
-      @include responsive(phone) {
-        width: 12rem;
-      }
-      top: 3rem;
-      left: 5rem;
-    }
-    &--p5 {
       @include responsive(tablet-portrait) {
-        width: 12rem;
-        left: 30rem;
-      }
-      @include responsive(phone) {
-        left: 22rem;
-        top: -6rem;
-      }
-      top: -5rem;
-      left: 30rem;
-    }
-    &--p6 {
-      @include responsive(tablet-landscape) {
-        width: 13rem;
-      }
-      @include responsive(tablet-portrait) {
-        width: 10rem;
-        left: 20rem;
-      }
-      @include responsive(phone) {
-        left: 30rem;
-        top: 4rem;
-      }
-      top: 0rem;
-      left: 51rem;
-    }
-    &--p7 {
-      @include responsive(laptop) {
-        right: 25rem;
-        // width: 15rem;
-      }
-      top: -1rem;
-      right: 32rem;
-    }
-    &--p8 {
-      @include responsive(laptop) {
-        width: 10rem;
-        right: 5rem;
-      }
-      @include responsive(tablet-portrait) {
-        right: -3rem;
-      }
-      top: 1rem;
-      right: 9rem;
-    }
-    &--p9 {
-      @include responsive(tablet-portrait) {
-        display: none;
-      }
-      top: -1rem;
-      right: -3rem;
-    }
-    &--p10 {
-      @include responsive(phone) {
-        width: 8rem;
-        left: 17rem;
+        width: 14rem;
         top: -8rem;
       }
-      top: 0rem;
-      left: 22rem;
-    }
-    &--p11 {
-      @include responsive(tablet-portrait) {
-        width: 12rem;
+      @include responsive(phone) {
+      }
+
+      @include responsive(small-phone) {
+        // top: -20rem;
+        // left: 28.5rem;
+        // width: 10rem;
+      }
+      &--p3 {
+        @include responsive(laptop) {
+        }
+        @include responsive(tablet-landscape) {
+          width: 14rem;
+          top: -8rem;
+        }
+        @include responsive(tablet-portrait) {
+          width: 14rem;
+          top: -8rem;
+        }
+        @include responsive(phone) {
+          width: 14rem;
+          top: -8rem;
+        }
+        top: -11rem;
+        right: -6rem;
+      }
+      &--p4 {
+        @include responsive(laptop) {
+        }
+        @include responsive(tablet-landscape) {
+          width: 14rem;
+          top: -8rem;
+        }
+        @include responsive(tablet-portrait) {
+          width: 14rem;
+          top: -8rem;
+        }
+        @include responsive(phone) {
+          width: 12rem;
+        }
+        top: 3rem;
+        left: 5rem;
+      }
+      &--p5 {
+        @include responsive(laptop) {
+        }
+        @include responsive(tablet-landscape) {
+          width: 14rem;
+          top: -8rem;
+        }
+
+        @include responsive(tablet-portrait) {
+          width: 12rem;
+          left: 30rem;
+        }
+        @include responsive(phone) {
+          left: 22rem;
+          top: -6rem;
+        }
+        top: -5rem;
         left: 30rem;
       }
-      @include responsive(phone) {
-        left: 25rem;
-        top: 2rem;
+      &--p6 {
+        @include responsive(laptop) {
+        }
+        @include responsive(tablet-landscape) {
+          width: 13rem;
+        }
+        @include responsive(tablet-portrait) {
+          width: 10rem;
+          left: 20rem;
+        }
+        @include responsive(phone) {
+          left: 30rem;
+          top: 4rem;
+        }
+        top: 0rem;
+        left: 51rem;
       }
-      top: 0rem;
-      left: 37rem;
-    }
-    &--p12 {
-      @include responsive(tablet-landscape) {
-        display: none;
+      &--p7 {
+        position: absolute;
+        top: -1rem;
+        right: 32rem;
+        @include responsive(laptop) {
+          right: 25rem;
+          // width: 15rem;
+        }
+        @include responsive(tablet-landscape) {
+          width: 14rem;
+          top: -8rem;
+        }
+        @include responsive(tablet-portrait) {
+          width: 14rem;
+          top: -8rem;
+        }
+        @include responsive(phone) {
+          width: 12rem;
+        }
+        @include responsive(small-phone) {
+          top: -20rem;
+          left: 28.5rem;
+          width: 10rem;
+        }
       }
-      top: 0rem;
-      left: 70rem;
+      &--p8 {
+        @include responsive(laptop) {
+          width: 10rem;
+          right: 5rem;
+        }
+        @include responsive(tablet-landscape) {
+          width: 14rem;
+          top: -8rem;
+        }
+        @include responsive(tablet-portrait) {
+          right: -3rem;
+        }
+        @include responsive(phone) {
+          width: 12rem;
+        }
+        top: 1rem;
+        right: 9rem;
+      }
+      &--p9 {
+        @include responsive(laptop) {
+          width: 10rem;
+          right: 5rem;
+        }
+        @include responsive(tablet-landscape) {
+          width: 14rem;
+          top: -8rem;
+        }
+        @include responsive(tablet-portrait) {
+          right: -3rem;
+        }
+        @include responsive(phone) {
+          width: 12rem;
+        }
+        top: -1rem;
+        right: -3rem;
+      }
+      &--p10 {
+        @include responsive(laptop) {
+          width: 10rem;
+          right: 5rem;
+        }
+        @include responsive(tablet-landscape) {
+          width: 14rem;
+          top: -8rem;
+        }
+        @include responsive(tablet-portrait) {
+          right: -3rem;
+        }
+        @include responsive(phone) {
+          width: 12rem;
+        }
+        top: 0rem;
+        left: 22rem;
+      }
+      &--p11 {
+        @include responsive(laptop) {
+          width: 10rem;
+          right: 5rem;
+        }
+        @include responsive(tablet-landscape) {
+          width: 14rem;
+          top: -8rem;
+        }
+        @include responsive(tablet-portrait) {
+          right: -3rem;
+        }
+        @include responsive(phone) {
+          width: 12rem;
+        }
+        top: 0rem;
+        left: 37rem;
+      }
+      &--p12 {
+        @include responsive(laptop) {
+          width: 10rem;
+          right: 5rem;
+        }
+        @include responsive(tablet-landscape) {
+          width: 14rem;
+          top: -8rem;
+        }
+        @include responsive(tablet-portrait) {
+          right: -3rem;
+        }
+        @include responsive(phone) {
+          width: 12rem;
+        }
+        top: 0rem;
+        left: 70rem;
+      }
     }
   }
 }
