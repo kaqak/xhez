@@ -23,6 +23,9 @@ body {
   text-align: center;
   box-sizing: border-box;
   margin-top: 3.6rem; }
+  @media (max-width: 83.2em) {
+    .logo_container {
+      margin-top: 1.8rem; } }
   @media (max-width: 75em) {
     .logo_container {
       margin-top: 2.5rem; } }
@@ -67,6 +70,9 @@ body {
   display: inline-block;
   margin-left: 12px;
   font-weight: bold; }
+  @media (max-width: 83.2em) {
+    .countdown__section {
+      margin-top: 0rem; } }
   @media (max-width: 31.25em) {
     .countdown__section {
       margin-left: 6px;
@@ -127,7 +133,11 @@ button {
   font-size: 16px;
   background-color: #fff;
   border-radius: 25px;
-  border: 1px solid #e3e4e6; }
+  border: 1px solid #e3e4e6;
+  margin-top: 16rem; }
+  @media (max-width: 37.5em) {
+    .search {
+      margin-top: 16rem; } }
 
 .search-input {
   width: 85.5%;
@@ -152,6 +162,10 @@ button {
   flex-shrink: 0;
   color: #fff;
   cursor: pointer; }
+  @media (max-width: 31.25em) {
+    .search-button {
+      margin: 23rem 11rem 10rem 0;
+      padding: 1rem 1rem 1rem 1rem; } }
 
 .search-button::before {
   content: "\f0e0";
@@ -159,7 +173,6 @@ button {
 
 .search-button span {
   display: inline-block;
-  width: 50px;
   padding-left: 5px;
   color: #ffffff;
   font-family: "inter";
@@ -167,7 +180,7 @@ button {
   font-weight: bold;
   letter-spacing: 0.75px;
   line-height: 15px;
-  text-align: center;
+  text-align: right;
   overflow: hidden;
   transition: width 0.4s ease, padding-left 0.1s ease; }
 
@@ -211,10 +224,22 @@ button {
   transform: translate(-50%, -50%); }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
-  .row::after {
-    content: "";
-    display: table;
-    clear: both; }
+    @media (max-width: 83.2em) {
+      .row:not(:last-child) {
+        margin-top: 10rem; } }
+    @media (max-width: 37.5em) {
+      .row:not(:last-child) {
+        margin-top: 0rem; } }
+    @media (max-width: 31.25em) {
+      .row:not(:last-child) {
+        margin-top: 10rem; } }
+    @media (max-width: 29rem) {
+      .row:not(:last-child) {
+        margin-top: 10rem; } }
+    .row:not(:last-child)::after {
+      content: "";
+      display: table;
+      clear: both; }
   .row [class^="col-"] {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
@@ -229,6 +254,9 @@ button {
   top: 85%;
   left: 50%;
   transform: translate(-50%, -50%); }
+  @media (max-width: 83.2em) {
+    .row2 {
+      margin-top: 10rem; } }
   .row2:not(:last-child) {
     margin-bottom: 8rem; }
   .row2::after {
@@ -244,46 +272,194 @@ button {
 
 .composition {
   position: relative; }
+  @media (max-width: 29rem) {
+    .composition {
+      display: none; } }
   .composition__photo {
     position: absolute; }
     .composition__photo--word {
       right: 45rem;
       top: 4rem; }
+      @media (max-width: 75em) {
+        .composition__photo--word {
+          right: 35rem;
+          top: -10rem; } }
+      @media (max-width: 56.25em) {
+        .composition__photo--word {
+          left: 5rem;
+          top: 10rem; } }
+      @media (max-width: 37.5em) {
+        .composition__photo--word {
+          width: 12rem;
+          top: 11rem;
+          left: 6rem; } }
+      @media (max-width: 31.25em) {
+        .composition__photo--word {
+          width: 12rem;
+          top: -6rem;
+          left: 6rem; } }
+      @media (max-width: 29rem) {
+        .composition__photo--word {
+          width: 8rem;
+          left: 14rem;
+          top: -8rem; } }
     .composition__photo--js {
       top: -3rem;
       right: 17rem; }
+      @media (max-width: 75em) {
+        .composition__photo--js {
+          right: 17rem;
+          top: -4rem; } }
     .composition__photo--ps {
       right: -6rem;
       top: -11rem; }
+      @media (max-width: 83.2em) {
+        .composition__photo--ps {
+          top: -2rem; } }
       @media (max-width: 75em) {
         .composition__photo--ps {
           right: -2rem;
           top: -3rem;
           width: 13rem; } }
+      @media (max-width: 37.5em) {
+        .composition__photo--ps {
+          right: -2rem; } }
+      @media (max-width: 29rem) {
+        .composition__photo--ps {
+          width: 9rem;
+          top: -8rem; } }
     .composition__photo--php {
       top: 3rem;
       left: 5rem; }
+      @media (max-width: 75em) {
+        .composition__photo--php {
+          right: -5rem;
+          top: -3rem; } }
+      @media (max-width: 37.5em) {
+        .composition__photo--php {
+          left: 4rem; } }
+      @media (max-width: 31.25em) {
+        .composition__photo--php {
+          left: 4rem;
+          top: -20rem; } }
+      @media (max-width: 29rem) {
+        .composition__photo--php {
+          width: 10rem;
+          left: 3rem;
+          top: -8rem; } }
     .composition__photo--sketch {
       top: -5rem;
       left: 30rem; }
+      @media (max-width: 56.25em) {
+        .composition__photo--sketch {
+          left: 25rem; } }
+      @media (max-width: 37.5em) {
+        .composition__photo--sketch {
+          width: 12rem;
+          left: 25rem;
+          top: -3rem; } }
+      @media (max-width: 31.25em) {
+        .composition__photo--sketch {
+          display: none; } }
     .composition__photo--css {
       top: 0rem;
       left: 51rem; }
+      @media (max-width: 56.25em) {
+        .composition__photo--css {
+          width: 13rem;
+          left: 44rem; } }
+      @media (max-width: 37.5em) {
+        .composition__photo--css {
+          top: 22rem;
+          left: 7rem; } }
+      @media (max-width: 31.25em) {
+        .composition__photo--css {
+          top: 22rem;
+          left: 5rem; } }
     .composition__photo--excel {
       top: -1rem;
       right: 32rem; }
+      @media (max-width: 75em) {
+        .composition__photo--excel {
+          right: 32rem;
+          top: -7rem; } }
     .composition__photo--xd {
       top: 1rem;
       right: 9rem; }
+      @media (max-width: 37.5em) {
+        .composition__photo--xd {
+          width: 12rem;
+          right: 0rem; } }
+      @media (max-width: 31.25em) {
+        .composition__photo--xd {
+          top: -33rem;
+          right: -2rem; } }
+      @media (max-width: 29rem) {
+        .composition__photo--xd {
+          top: 0rem; } }
     .composition__photo--figma {
       top: -1rem;
       right: -3rem; }
+      @media (max-width: 83.2em) {
+        .composition__photo--figma {
+          top: 4rem; } }
+      @media (max-width: 37.5em) {
+        .composition__photo--figma {
+          top: 20rem; } }
+      @media (max-width: 37.5em) {
+        .composition__photo--figma {
+          top: -9rem;
+          right: 0rem; } }
+      @media (max-width: 31.25em) {
+        .composition__photo--figma {
+          top: -7rem;
+          right: -16rem; } }
+      @media (max-width: 29rem) {
+        .composition__photo--figma {
+          top: 12rem;
+          width: 9rem; } }
     .composition__photo--html {
       left: 22rem;
       top: 0rem; }
+      @media (max-width: 37.5em) {
+        .composition__photo--html {
+          left: 27rem; } }
+      @media (max-width: 31.25em) {
+        .composition__photo--html {
+          width: 12rem;
+          left: 23rem;
+          top: -32rem; } }
+      @media (max-width: 29rem) {
+        .composition__photo--html {
+          width: 8rem;
+          left: 0rem;
+          top: 10rem; } }
     .composition__photo--java {
       top: 0rem;
       left: 37rem; }
+      @media (max-width: 37.5em) {
+        .composition__photo--java {
+          top: -15rem;
+          left: 23rem; } }
+      @media (max-width: 31.25em) {
+        .composition__photo--java {
+          width: 12rem; } }
+      @media (max-width: 29rem) {
+        .composition__photo--java {
+          width: 8rem;
+          left: 0rem;
+          top: 0rem; } }
     .composition__photo--ps_small {
       top: 0rem;
       left: 70rem; }
+      @media (max-width: 75em) {
+        .composition__photo--ps_small {
+          left: 62rem;
+          top: -18rem; } }
+      @media (max-width: 56.25em) {
+        .composition__photo--ps_small {
+          left: 15rem;
+          top: 5rem; } }
+      @media (max-width: 37.5em) {
+        .composition__photo--ps_small {
+          display: none; } }

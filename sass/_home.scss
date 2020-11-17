@@ -23,6 +23,9 @@ body {
   text-align: center;
   box-sizing: border-box;
   margin-top: 3.6rem;
+  @include responsive(laptop) {
+    margin-top: 1.8rem;
+  }
   @include responsive(tablet-landscape) {
     margin-top: 2.5rem;
   }
@@ -73,6 +76,9 @@ body {
   display: inline-block;
   margin-left: 12px;
   font-weight: bold;
+  @include responsive(laptop) {
+    margin-top: 0rem;
+  }
   @include responsive(small-phone) {
     margin-left: 6px;
     display: inline-block;
@@ -136,6 +142,10 @@ button {
   background-color: #fff;
   border-radius: 25px;
   border: 1px solid #e3e4e6;
+  margin-top: 16rem;
+  @include responsive(phone) {
+    margin-top: 16rem;
+  }
 }
 .search-input {
   width: 85.5%;
@@ -160,6 +170,10 @@ button {
   flex-shrink: 0;
   color: #fff;
   cursor: pointer;
+  @include responsive(small-phone) {
+    margin: 23rem 11rem 10rem 0;
+    padding: 1rem 1rem 1rem 1rem;
+  }
 }
 .search-button::before {
   content: "\f0e0";
@@ -167,7 +181,7 @@ button {
 }
 .search-button span {
   display: inline-block;
-  width: 50px;
+  // width: 4px;
   padding-left: 5px;
   color: #ffffff;
   font-family: "inter";
@@ -175,7 +189,7 @@ button {
   font-weight: bold;
   letter-spacing: 0.75px;
   line-height: 15px;
-  text-align: center;
+  text-align: right;
   overflow: hidden;
   transition: width 0.4s ease, padding-left 0.1s ease;
 }
@@ -227,8 +241,21 @@ button {
 
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+    @include responsive(laptop) {
+      margin-top: 10rem;
+    }
+    @include responsive(phone) {
+      margin-top: 0rem;
+    }
+    @include responsive(small-phone) {
+      margin-top: 10rem;
+    }
+    @include responsive(very-small-phone) {
+      margin-top: 10rem;
+    }
+
+    @include clearfix;
   }
-  @include clearfix;
   [class^="col-"] {
     // background-color: orangered;
     float: left;
@@ -249,6 +276,9 @@ button {
   top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
+  @include responsive(laptop) {
+    margin-top: 10rem;
+  }
 
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
@@ -268,60 +298,209 @@ button {
 
 .composition {
   position: relative;
+  @include responsive(very-small-phone) {
+    display: none;
+  }
   &__photo {
     position: absolute;
     &--word {
       right: 45rem;
       top: 4rem;
+      @include responsive(tablet-landscape) {
+        right: 35rem;
+        top: -10rem;
+      }
+      @include responsive(tablet-portrait) {
+        left: 5rem;
+        top: 10rem;
+      }
+      @include responsive(phone) {
+        width: 12rem;
+        top: 11rem;
+        left: 6rem;
+      }
+      @include responsive(small-phone) {
+        width: 12rem;
+        top: -6rem;
+        left: 6rem;
+      }
+      @include responsive(very-small-phone) {
+        width: 8rem;
+        left: 14rem;
+        top: -8rem;
+      }
     }
     &--js {
       top: -3rem;
       right: 17rem;
+      @include responsive(tablet-landscape) {
+        right: 17rem;
+        top: -4rem;
+      }
     }
     &--ps {
       right: -6rem;
       top: -11rem;
+      @include responsive(laptop) {
+        top: -2rem;
+      }
       @include responsive(tablet-landscape) {
         right: -2rem;
         top: -3rem;
         width: 13rem;
       }
+      @include responsive(phone) {
+        right: -2rem;
+      }
+      @include responsive(very-small-phone) {
+        width: 9rem;
+        top: -8rem;
+      }
     }
     &--php {
       top: 3rem;
       left: 5rem;
+      @include responsive(tablet-landscape) {
+        right: -5rem;
+        top: -3rem;
+      }
+      @include responsive(phone) {
+        left: 4rem;
+      }
+      @include responsive(small-phone) {
+        left: 4rem;
+        top: -20rem;
+      }
+      @include responsive(very-small-phone) {
+        width: 10rem;
+        left: 3rem;
+        top: -8rem;
+      }
     }
     &--sketch {
       top: -5rem;
       left: 30rem;
+      @include responsive(tablet-portrait) {
+        left: 25rem;
+      }
+      @include responsive(phone) {
+        width: 12rem;
+        left: 25rem;
+        top: -3rem;
+      }
+      @include responsive(small-phone) {
+        display: none;
+      }
     }
     &--css {
       top: 0rem;
       left: 51rem;
+      @include responsive(tablet-portrait) {
+        width: 13rem;
+        left: 44rem;
+      }
+      @include responsive(phone) {
+        top: 22rem;
+        left: 7rem;
+      }
+      @include responsive(small-phone) {
+        top: 22rem;
+        left: 5rem;
+      }
     }
     &--excel {
       top: -1rem;
       right: 32rem;
+      @include responsive(tablet-landscape) {
+        right: 32rem;
+        top: -7rem;
+      }
     }
     &--xd {
       top: 1rem;
       right: 9rem;
+      @include responsive(phone) {
+        width: 12rem;
+        right: 0rem;
+      }
+      @include responsive(small-phone) {
+        top: -33rem;
+        right: -2rem;
+      }
+      @include responsive(very-small-phone) {
+        top: 0rem;
+      }
     }
     &--figma {
       top: -1rem;
       right: -3rem;
+      @include responsive(laptop) {
+        top: 4rem;
+      }
+      @include responsive(phone) {
+        top: 20rem;
+      }
+      @include responsive(phone) {
+        top: -9rem;
+        right: 0rem;
+      }
+      @include responsive(small-phone) {
+        top: -7rem;
+        right: -16rem;
+      }
+      @include responsive(very-small-phone) {
+        top: 12rem;
+        width: 9rem;
+      }
     }
     &--html {
       left: 22rem;
       top: 0rem;
+      @include responsive(phone) {
+        left: 27rem;
+      }
+      @include responsive(small-phone) {
+        width: 12rem;
+        left: 23rem;
+        top: -32rem;
+      }
+
+      @include responsive(very-small-phone) {
+        width: 8rem;
+        left: 0rem;
+        top: 10rem;
+      }
     }
     &--java {
       top: 0rem;
       left: 37rem;
+      @include responsive(phone) {
+        top: -15rem;
+        left: 23rem;
+      }
+      @include responsive(small-phone) {
+        width: 12rem;
+      }
+      @include responsive(very-small-phone) {
+        width: 8rem;
+        left: 0rem;
+        top: 0rem;
+      }
     }
     &--ps_small {
       top: 0rem;
       left: 70rem;
+      @include responsive(tablet-landscape) {
+        left: 62rem;
+        top: -18rem;
+      }
+      @include responsive(tablet-portrait) {
+        left: 15rem;
+        top: 5rem;
+      }
+      @include responsive(phone) {
+        display: none;
+      }
     }
   }
 }
